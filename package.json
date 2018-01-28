@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/fenghengzhi/oray_ddns/issues"
   },
-  "homepage": "https://github.com/fenghengzhi/oray_ddns"
+  "homepage": "https://github.com/fenghengzhi/oray_ddns",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "node-fetch": "^1.7.3"
+  }
 }

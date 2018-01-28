@@ -1,7 +1,12 @@
-var promise1 = new Promise(function(resolve, reject) {
-  setTimeout(resolve, 10000, 'foo');
-});
-
-console.log(promise1);
-// expected output: [object Promise]
-promise1.then(d=>console.log(d))
+const fetch = require('node-fetch');
+const cheerio = require('cheerio');
+const fs = require('fs');
+const config = JSON.parse(fs.readFileSync('config.json'))
+fetch('http://ddns.oray.com/checkip')
+    .then(res => res.text())
+    .then((d) => {
+        const $ = cheerio.load(d);
+        const body = $('body').text();
+        const ip = body.replace('Current IP Address: ', '');
+        return fetch(`http://username:password@ddns.oray.com/ph/update?hostname=yourhostname&myip=ipaddress`);
+    });
