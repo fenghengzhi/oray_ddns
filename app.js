@@ -4,6 +4,7 @@ const config = JSON.parse(fs.readFileSync('config.json'));
 const username = config.username;
 const password = config.password;
 const hostname = config.hostname;
+const interval = config.interval;
 
 function updateIp() {
     fetch('http://ddns.oray.com/checkip')
@@ -14,4 +15,4 @@ function updateIp() {
         });
 }
 
-setInterval(updateIp, 1000 * 60 * 60);
+setInterval(updateIp, interval);
