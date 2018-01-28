@@ -1,0 +1,19 @@
+{
+  "name": "oray_ddns",
+  "version": "1.0.0",
+  "description": "花生壳ddns",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=production node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fenghengzhi/oray_ddns.git"
+  },
+  "author": "fenghengzhi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fenghengzhi/oray_ddns/issues"
+  },
+  "homepage": "https://github.com/fenghengzhi/oray_ddns"
+}
