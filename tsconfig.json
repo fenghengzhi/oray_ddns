@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "build",
+    "lib": [
+      "es7",
+      "es6"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include":[
+    "server/server.ts"
+  ]
+}

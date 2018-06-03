@@ -1,5 +1,6 @@
 {
   "username": "username",
   "password": "password",
-  "hostname": "hostname"
+  "hostname": "hostname",
+  "interval": 3600000
 }

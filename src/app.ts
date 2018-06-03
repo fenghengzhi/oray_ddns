@@ -1,13 +1,10 @@
-const fetch = require('node-fetch');
-const fs = require('fs');
-const config = JSON.parse(fs.readFileSync('config.json'));
-const username = config.username;
-const password = config.password;
-const hostname = config.hostname;
-const interval = config.interval;
+import config from '../config';
+import Axios from 'axios';
+
+const {username, password, hostname, interval} = config;
 
 function updateIp() {
-    fetch('http://ddns.oray.com/checkip')
+    Axios.get('http://ddns.oray.com/checkip')
         .then(res => res.text())
         .then((d) => {
             const ip = d.match(/\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/)[0];

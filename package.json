@@ -4,7 +4,7 @@
   "description": "花生壳ddns",
   "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "ts-node src/app"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/fenghengzhi/oray_ddns",
   "dependencies": {
-    "node-fetch": "^1.7.3"
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "ts-node": "^6.1.0",
+    "typescript": "^2.9.1"
   }
 }
