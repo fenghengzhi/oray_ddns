@@ -18,9 +18,10 @@ function updateIp() {
     //         return Axios.get(`http://${username}:${password}@ddns.oray.com/ph/update?hostname=${hostname}&myip=${ip}`)
     //     });
     Axios.get(`http://${username}:${password}@ddns.oray.com/ph/update?hostname=${hostname}`)
-        .then(res => console.log(res.data))
-        .catch(err => console.log('error'))
+        .then(res => console.log((new Date()).toString(), res.data))
+        .catch(err => console.log((new Date()).toString(), 'error'))
 }
 
 updateIp();
 setInterval(updateIp, interval);
+console.time
