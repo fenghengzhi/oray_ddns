@@ -1,3 +1,11 @@
 # oray ddns client
 edit config.json<br>
-run "node app" or "npm start"
+```
+yarn install
+yarn start
+```
+or
+```
+npm install
+npm start
+```
